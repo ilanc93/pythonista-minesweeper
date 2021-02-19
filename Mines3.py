@@ -213,7 +213,7 @@ class Game(Scene):
 			if bombs_left<0:
 				self.layers.bombs[0].image = self.sprites.digits[10].name
 				for i in range(2):
-					digit = (abs(bombs_left)/pow(10,i))%10
+					digit = int(abs(bombs_left)/pow(10,i))%10
 					self.layers.bombs[2-i].image = self.sprites.digits[digit].name
 			else:
 				for i in range(3):
